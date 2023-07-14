@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "github.com/your-username/service1/proto";
+service Collector {
+  rpc CollectPosts (CollectPostsRequest) returns (CollectPostsResponse) {}
+}
+
+message CollectPostsRequest {}
+
+message CollectPostsResponse {
+  bool success = 1;
+}
